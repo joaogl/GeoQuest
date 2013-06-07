@@ -23,7 +23,7 @@ public class SeePoints extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	// Page Name
-	private String name = "Pontuacao | " + Points.getWinner();
+	private String name = "Pontuacao | " + PointsValidate.getStats(true);
 	// Page Name end
 
 	protected JPanel window = new JPanel();
@@ -81,14 +81,14 @@ public class SeePoints extends JFrame {
 
 		int dist = 30;
 		
-		JLabel welcome = new JLabel("Equipa 1 - " + Team1.get() + " Pontos");
+		JLabel welcome = new JLabel("Equipa 1 - " + Points.getRed() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.RED);
 		size = 170;
 		welcome.setBounds(((width - size) / 8) - 20, ((height - 17) / 2) - dist, size, 17);
 		window.add(welcome);
 
-		welcome = new JLabel("Equipa 2 - " + Team2.get() + " Pontos");
+		welcome = new JLabel("Equipa 2 - " + Points.getBlue() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.BLUE);
 		welcome.setBounds((((width - size) * 7) / 8) + 20, ((height - 17) / 2) - dist, size, 17);

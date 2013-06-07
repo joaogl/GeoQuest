@@ -17,14 +17,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import me.joaogl.data.ProgramInfo;
-import me.joaogl.data.points.Points;
+import me.joaogl.data.points.PointsValidate;
 import me.joaogl.game.question.Questions1;
 
 public class Conclusion extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	// Page Name
-	private String name = "Conclusão | " + Points.getWinner();
+	private String name = "Conclusão | " + PointsValidate.getStats(true);
 	// Page Name end
 
 	protected JPanel window = new JPanel();
@@ -76,10 +76,10 @@ public class Conclusion extends JFrame {
 	private void drawWinner() {
 		int size;
 		JLabel welcome;
-		if (Points.getSpecialWinner().equalsIgnoreCase("Empate")) {
-			welcome = new JLabel(Points.getWinner());
+		if (PointsValidate.getStats(false).equalsIgnoreCase("Empate")) {
+			welcome = new JLabel(PointsValidate.getStats(true));
 		} else {
-			welcome = new JLabel("O Vencedor é: " + Points.getSpecialWinner());
+			welcome = new JLabel("O Vencedor é: " + PointsValidate.getStats(false));
 		}
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		size = 300;

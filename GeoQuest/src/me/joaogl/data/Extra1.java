@@ -12,13 +12,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import me.joaogl.data.ProgramInfo;
-import me.joaogl.data.points.Points;
+import me.joaogl.data.points.PointsValidate;
 
 public class Extra1 extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	// Page Name
-	private String name = "Extra - 1 | " + Points.getWinner();
+	private String name = "Extra - 1 | " + PointsValidate.getStats(true);
 	// Page Name end
 
 	protected JPanel window = new JPanel();

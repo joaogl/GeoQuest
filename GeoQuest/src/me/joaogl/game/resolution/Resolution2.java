@@ -20,8 +20,7 @@ import javax.swing.JPanel;
 
 import me.joaogl.data.ProgramInfo;
 import me.joaogl.data.points.Points;
-import me.joaogl.data.points.Team1;
-import me.joaogl.data.points.Team2;
+import me.joaogl.data.points.PointsValidate;
 import me.joaogl.game.question.Questions2;
 import me.joaogl.game.question.Questions3;
 
@@ -29,7 +28,7 @@ public class Resolution2 extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	// Page Name
-	private String name = "Resolução - " + Questions2.pageid + " | " + Points.getWinner();
+	private String name = "Resolução - " + Questions2.pageid + " | " + PointsValidate.getStats(true);
 	// Page Name end
 
 	protected JPanel window = new JPanel();
@@ -92,27 +91,27 @@ public class Resolution2 extends JFrame {
 	public void drawPoins(){
 		int size;
 		int dist = 20;
-		JLabel welcome = new JLabel("Equipa 1 - " + Team1.get() + " Pontos");
+		JLabel welcome = new JLabel("Equipa 1 - " + Points.getRed() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.RED);
 		size = 170;
 		welcome.setBounds(((width - size) / 8) - dist, 100, size, 50);
 		window.add(welcome);
 
-		welcome = new JLabel("Equipa 2 - " + Team2.get() + " Pontos");
+		welcome = new JLabel("Equipa 2 - " + Points.getBlue() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.BLUE);
 		welcome.setBounds((((width - size) * 7) / 8) + dist, 100, size, 50);
 		window.add(welcome);
 		
-		welcome = new JLabel("Questao " + Questions2.pageid + " - " + Team1.Right(Questions2.pageid));
+		welcome = new JLabel("Questao " + Questions2.pageid + " - " + Points.checkRed(Questions2.pageid));
 		welcome.setFont(new Font("Arial", Font.BOLD, 15));
 		welcome.setForeground(Color.RED);
 		size = 170;
 		welcome.setBounds(((width - size) / 8) - dist, 150, size, 50);
 		window.add(welcome);
 
-		welcome = new JLabel("Questao " + Questions2.pageid + " - " + Team2.Right(Questions2.pageid));
+		welcome = new JLabel("Questao " + Questions2.pageid + " - " + Points.checkBlue(Questions2.pageid));
 		welcome.setFont(new Font("Arial", Font.BOLD, 15));
 		welcome.setForeground(Color.BLUE);
 		welcome.setBounds((((width - size) * 7) / 8) + dist, 150, size, 50);

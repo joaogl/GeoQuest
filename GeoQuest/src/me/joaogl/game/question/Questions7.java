@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 import me.joaogl.components.Comp7;
 import me.joaogl.data.ProgramInfo;
-import me.joaogl.data.points.Points;
+import me.joaogl.data.points.PointsValidate;
 import me.joaogl.data.timer.QuestionTimer;
 
 public class Questions7 extends JFrame {
@@ -30,7 +30,7 @@ public class Questions7 extends JFrame {
 
 	// Page Name
 	public static int pageid = 7;
-	private String name = "Pergunta " + pageid + " | " + Points.getWinner();
+	private String name = "Pergunta " + pageid + " | " + PointsValidate.getStats(true);
 	// Page Name end
 
 	public static JPanel window = new JPanel();
@@ -96,7 +96,7 @@ public class Questions7 extends JFrame {
 
 		validar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Points.Validar((String) team2an.getSelectedItem(), (String) team1an.getSelectedItem(), pageid);
+				PointsValidate.Validar((String) team2an.getSelectedItem(), (String) team1an.getSelectedItem(), pageid);
 				Comp7.close();
 				dispose();
 			}

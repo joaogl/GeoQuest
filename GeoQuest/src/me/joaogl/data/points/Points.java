@@ -2,93 +2,87 @@ package me.joaogl.data.points;
 
 public class Points {
 
-	public static void Validar(String TeamA, String TeamB, int id) {
-		if (id == 1) {
-			if (TeamA.equalsIgnoreCase("3,5 Segundos")) {
-				Team1.q1 = true;
-			} else Team1.q1 = false;
-			if (TeamB.equalsIgnoreCase("3,5 Segundos")) {
-				Team2.q1 = true;
-			} else Team2.q1 = false;
-		} else if (id == 2) {
-			if (TeamA.equalsIgnoreCase("Índice Global da Fome")) {
-				Team1.q2 = true;
-			} else Team1.q2 = false;
-			if (TeamB.equalsIgnoreCase("Índice Global da Fome")) {
-				Team2.q2 = true;
-			} else Team2.q2 = false;
-		} else if (id == 3) {
-			if (TeamA.equalsIgnoreCase("Nauru")) {
-				Team1.q3 = true;
-			} else Team1.q3 = false;
-			if (TeamB.equalsIgnoreCase("Nauru")) {
-				Team2.q3 = true;
-			} else Team2.q3 = false;
-		} else if (id == 4) {
-			if (TeamA.equalsIgnoreCase("815 milhões")) {
-				Team1.q4 = true;
-			} else Team1.q4 = false;
-			if (TeamB.equalsIgnoreCase("815 milhões")) {
-				Team2.q4 = true;
-			} else Team2.q4 = false;
-		} else if (id == 5) {
-			if (TeamA.equalsIgnoreCase("1100 milhões")) {
-				Team1.q5 = true;
-			} else Team1.q5 = false;
-			if (TeamB.equalsIgnoreCase("1100 milhões")) {
-				Team2.q5 = true;
-			} else Team2.q5 = false;
-		} else if (id == 6) {
-			if (TeamA.equalsIgnoreCase("150 litros")) {
-				Team1.q6 = true;
-			} else Team1.q6 = false;
-			if (TeamB.equalsIgnoreCase("150 litros")) {
-				Team2.q6 = true;
-			} else Team2.q6 = false;
-		} else if (id == 7) {
-			if (TeamA.equalsIgnoreCase("160")) {
-				Team1.q7 = true;
-			} else Team1.q7 = false;
-			if (TeamB.equalsIgnoreCase("160")) {
-				Team2.q7 = true;
-			} else Team2.q7 = false;
-		} else if (id == 8) {
-			if (TeamA.equalsIgnoreCase("1%")) {
-				Team1.q8 = true;
-			} else Team1.q8 = false;
-			if (TeamB.equalsIgnoreCase("1%")) {
-				Team2.q8 = true;
-			} else Team2.q8 = false;
-		} else if (id == 9) {
-			if (TeamA.equalsIgnoreCase("17%")) {
-				Team1.q9 = true;
-			} else Team1.q9 = false;
-			if (TeamB.equalsIgnoreCase("17%")) {
-				Team2.q9 = true;
-			} else Team2.q9 = false;
-		} else if (id == 10) {
-			if (TeamA.equalsIgnoreCase("Brasil")) {
-				Team1.q10 = true;
-			} else Team1.q10 = false;
-			if (TeamB.equalsIgnoreCase("Brasil")) {
-				Team2.q10 = true;
-			} else Team2.q10 = false;
-		}
+	public static boolean rq1 = false;
+	public static boolean rq2 = false;
+	public static boolean rq3 = false;
+	public static boolean rq4 = false;
+	public static boolean rq5 = false;
+	public static boolean rq6 = false;
+	public static boolean rq7 = false;
+	public static boolean rq8 = false;
+	public static boolean rq9 = false;
+	public static boolean rq10 = false;
+
+	public static boolean bq1 = false;
+	public static boolean bq2 = false;
+	public static boolean bq3 = false;
+	public static boolean bq4 = false;
+	public static boolean bq5 = false;
+	public static boolean bq6 = false;
+	public static boolean bq7 = false;
+	public static boolean bq8 = false;
+	public static boolean bq9 = false;
+	public static boolean bq10 = false;
+
+	public static String checkBlue(int id) {
+		String awnser = "Falhou";
+		if (id == 1) if (bq1) awnser = "Acertou";
+		if (id == 2) if (bq2) awnser = "Acertou";
+		if (id == 3) if (bq3) awnser = "Acertou";
+		if (id == 4) if (bq4) awnser = "Acertou";
+		if (id == 5) if (bq5) awnser = "Acertou";
+		if (id == 6) if (bq6) awnser = "Acertou";
+		if (id == 7) if (bq7) awnser = "Acertou";
+		if (id == 8) if (bq8) awnser = "Acertou";
+		if (id == 9) if (bq9) awnser = "Acertou";
+		if (id == 10) if (bq10) awnser = "Acertou";
+		return awnser;
 	}
 
-	public static String getWinner() {
-		String winner = null;
-		if (Team1.get() > Team2.get()) winner = "A ganhar: Vermelha";
-		if (Team1.get() < Team2.get()) winner = "A ganhar: Azul";
-		if (Team1.get() == Team2.get()) winner = "Empate: " + Team1.get() + " a " + Team2.get();
-		return winner;
+	public static String checkRed(int id) {
+		String awnser = "Falhou";
+		if (id == 1) if (rq1) awnser = "Acertou";
+		if (id == 2) if (rq2) awnser = "Acertou";
+		if (id == 3) if (rq3) awnser = "Acertou";
+		if (id == 4) if (rq4) awnser = "Acertou";
+		if (id == 5) if (rq5) awnser = "Acertou";
+		if (id == 6) if (rq6) awnser = "Acertou";
+		if (id == 7) if (rq7) awnser = "Acertou";
+		if (id == 8) if (rq8) awnser = "Acertou";
+		if (id == 9) if (rq9) awnser = "Acertou";
+		if (id == 10) if (rq10) awnser = "Acertou";
+		return awnser;
 	}
-	
-	public static String getSpecialWinner() {
-		String winner = null;
-		if (Team1.get() > Team2.get()) winner = "Equipa Vermelha";
-		if (Team1.get() < Team2.get()) winner = "Equipa Azul";
-		if (Team1.get() == Team2.get()) winner = "Empate";
-		return winner;
+
+	public static int getBlue() {
+		int blue = 0;
+		if (bq1) blue++;
+		if (bq2) blue++;
+		if (bq3) blue++;
+		if (bq4) blue++;
+		if (bq5) blue++;
+		if (bq6) blue++;
+		if (bq7) blue++;
+		if (bq8) blue++;
+		if (bq9) blue++;
+		if (bq10) blue++;
+
+		return blue;
+	}
+
+	public static int getRed() {
+		int red = 0;
+		if (rq1) red++;
+		if (rq2) red++;
+		if (rq3) red++;
+		if (rq4) red++;
+		if (rq5) red++;
+		if (rq6) red++;
+		if (rq7) red++;
+		if (rq8) red++;
+		if (rq9) red++;
+		if (rq10) red++;
+
+		return red;
 	}
 }

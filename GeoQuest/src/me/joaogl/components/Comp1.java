@@ -12,9 +12,8 @@ import me.joaogl.Launcher.Credits;
 import me.joaogl.Launcher.Launcher;
 import me.joaogl.data.ProgramInfo;
 import me.joaogl.data.points.ChangePoints;
+import me.joaogl.data.points.Points;
 import me.joaogl.data.points.SeePoints;
-import me.joaogl.data.points.Team1;
-import me.joaogl.data.points.Team2;
 import me.joaogl.data.timer.QuestionTimer;
 import me.joaogl.data.timer.TotalTimer;
 import me.joaogl.game.question.Questions1;
@@ -90,6 +89,7 @@ public class Comp1 {
 		main.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Launcher();
+				close();
 			}
 		});
 
@@ -125,6 +125,7 @@ public class Comp1 {
 
 		Points.add(pont);
 		Points.add(change);
+		
 
 		// Items Debbug
 
@@ -152,14 +153,14 @@ public class Comp1 {
 	public static void drawTeams() {
 		int size;
 
-		welcome = new JLabel("Equipa 1 - " + Team1.get() + " Pontos");
+		welcome = new JLabel("Equipa 1 - " + Points.getRed() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.RED);
 		size = 170;
 		welcome.setBounds((Questions1.width - size) / 8, 200, size, 50);
 		Questions1.window.add(welcome);
 
-		welcome = new JLabel("Equipa 2 - " + Team2.get() + " Pontos");
+		welcome = new JLabel("Equipa 2 - " + Points.getBlue() + " Pontos");
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		welcome.setForeground(Color.BLUE);
 		welcome.setBounds(((Questions1.width - size) * 7) / 8, 200, size, 50);
