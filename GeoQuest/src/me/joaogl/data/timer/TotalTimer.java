@@ -2,15 +2,17 @@ package me.joaogl.data.timer;
 
 import java.awt.Toolkit;
 
+import me.joaogl.data.ProgramInfo;
+
 public class TotalTimer {
 	static int sec = 0;
 	static int min = 0;
 	static String time = null;
 
-	public static void Time() {
+	public static void Timer() {
 		new Thread(new Runnable() {
 			public void run() {
-				while (min != 15) {
+				while (min != ProgramInfo.totalTime) {
 					if (sec == 59) {
 						sec = 0;
 						min++;
@@ -23,9 +25,7 @@ public class TotalTimer {
 						e.printStackTrace();
 					}
 				}
-				if(min == 15){
-					time = "O tempo acabou.";					
-				}
+				if (min == ProgramInfo.totalTime) time = "O tempo acabou.";
 				Toolkit.getDefaultToolkit().beep();
 			}
 		}).start();

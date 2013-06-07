@@ -48,7 +48,7 @@ public class Comp4 {
 						}
 					}
 					if (!(QuestionTimer.getTime() == 0)) {
-						if (QuestionTimer.getTime() == QuestionTimer.TotalTime) {
+						if (QuestionTimer.getTime() == QuestionTimer.sec) {
 							Questions4.countersec.setText("Acabou!");
 						} else {
 							Questions4.countersec.setText("Tempo: " + QuestionTimer.getTime());
@@ -185,7 +185,7 @@ public class Comp4 {
 		tempo.setBounds((Questions4.width - size) / 2, 120, size, 12);
 		Questions4.window.add(tempo);
 
-		Questions4.countersec = new JLabel("Tempo: " + QuestionTimer.TotalTime_Mask);
+		Questions4.countersec = new JLabel("Tempo: " + (QuestionTimer.sec - 1));
 		Questions4.countersec.setFont(new Font("Arial", Font.BOLD, 15));
 		size = 80;
 		Questions4.countersec.setBounds((Questions4.width - size) / 2, 140, size, 12);

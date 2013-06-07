@@ -14,4 +14,8 @@ public class ProgramInfo {
 	public static boolean open = false;
 	public static boolean close = false;
 	
+	// Timers
+	public static int questionTime = 13;
+	public static int totalTime = 15;
+	
 }

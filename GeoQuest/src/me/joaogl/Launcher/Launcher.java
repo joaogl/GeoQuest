@@ -46,7 +46,7 @@ public class Launcher extends JFrame {
 		drawCredits();
 		window.setLayout(null);
 		setVisible(true);
-		TotalTimer.Time();
+		TotalTimer.Timer();
 		counterDisplay();
 		if (!(ProgramInfo.open)) {
 			ProgramInfo.open = true;
