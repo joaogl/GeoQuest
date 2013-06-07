@@ -41,18 +41,12 @@ public class Comp8 {
 						e.printStackTrace();
 					}
 					if (!(TotalTimer.getTime() == null)) {
-						if (TotalTimer.getTime() == "15:0" || TotalTimer.getTime() == "O tempo acabou.") {
-							Questions8.counter.setText("Acabou!");
-						} else {
-							Questions8.counter.setText("Tempo: " + TotalTimer.getTime());
-						}
+						if (TotalTimer.getTime() == "15:0" || TotalTimer.getTime() == "O tempo acabou.") Questions8.counter.setText("Acabou!");
+						else Questions8.counter.setText("Tempo: " + TotalTimer.getTime());
 					}
 					if (!(QuestionTimer.getTime() == 0)) {
-						if (QuestionTimer.getTime() == QuestionTimer.sec) {
-							Questions8.countersec.setText("Acabou!");
-						} else {
-							Questions8.countersec.setText("Tempo: " + QuestionTimer.getTime());
-						}
+						if (QuestionTimer.getTime() == QuestionTimer.sec) Questions8.countersec.setText("Acabou!");
+						else Questions8.countersec.setText("Tempo: " + QuestionTimer.getTime());
 					}
 				}
 			}
@@ -71,9 +65,7 @@ public class Comp8 {
 
 		Questions8.bar.add(About);
 		Questions8.bar.add(Points);
-		if (ProgramInfo.debugging) {
-			Questions8.bar.add(Debugging);
-		}
+		if (ProgramInfo.debugging) Questions8.bar.add(Debugging);
 
 		// Items Account
 		JMenuItem cred = new JMenuItem("Creditos");
@@ -196,11 +188,8 @@ public class Comp8 {
 	public static void close() {
 		Questions8.window.removeAll();
 		if (ProgramInfo.debugging) {
-			if (ProgramInfo.debugquestions == Questions8.pageid) {
-				new Questions8();
-			} else {
-				new Resolution8();
-			}
+			if (ProgramInfo.debugquestions == Questions8.pageid) new Questions8();
+			else new Resolution8();
 		} else new Resolution8();
 	}
 }

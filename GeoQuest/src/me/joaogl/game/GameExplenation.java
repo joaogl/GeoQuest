@@ -204,12 +204,8 @@ public class GameExplenation extends JFrame {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					if (!(TotalTimer.getTime() == null)) {
-						counter.setText("Tempo: " + TotalTimer.getTime());
-					}
-					if (TotalTimer.getTime() == "15:00") {
-						counter.setText("O tempo Acabou!");
-					}
+					if (!(TotalTimer.getTime() == null)) counter.setText("Tempo: " + TotalTimer.getTime());
+					if (TotalTimer.getTime() == "15:00") counter.setText("O tempo Acabou!");
 				}
 			}
 		}).start();

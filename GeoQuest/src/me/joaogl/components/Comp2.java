@@ -41,18 +41,12 @@ public class Comp2 {
 						e.printStackTrace();
 					}
 					if (!(TotalTimer.getTime() == null)) {
-						if (TotalTimer.getTime() == "15:0" || TotalTimer.getTime() == "O tempo acabou.") {
-							Questions2.counter.setText("Acabou!");
-						} else {
-							Questions2.counter.setText("Tempo: " + TotalTimer.getTime());
-						}
+						if (TotalTimer.getTime() == "15:0" || TotalTimer.getTime() == "O tempo acabou.") Questions2.counter.setText("Acabou!");
+						else Questions2.counter.setText("Tempo: " + TotalTimer.getTime());
 					}
 					if (!(QuestionTimer.getTime() == 0)) {
-						if (QuestionTimer.getTime() == 13) {
-							Questions2.countersec.setText("Acabou!");
-						} else {
-							Questions2.countersec.setText("Tempo: " + QuestionTimer.getTime());
-						}
+						if (QuestionTimer.getTime() == 13) Questions2.countersec.setText("Acabou!");
+						else Questions2.countersec.setText("Tempo: " + QuestionTimer.getTime());
 					}
 				}
 			}
@@ -71,9 +65,7 @@ public class Comp2 {
 
 		Questions2.bar.add(About);
 		Questions2.bar.add(Points);
-		if (ProgramInfo.debugging) {
-			Questions2.bar.add(Debugging);
-		}
+		if (ProgramInfo.debugging) Questions2.bar.add(Debugging);
 
 		// Items Account
 		JMenuItem cred = new JMenuItem("Creditos");
@@ -196,11 +188,8 @@ public class Comp2 {
 	public static void close() {
 		Questions2.window.removeAll();
 		if (ProgramInfo.debugging) {
-			if (ProgramInfo.debugquestions == Questions2.pageid) {
-				new Questions2();
-			} else {
-				new Resolution2();
-			}
+			if (ProgramInfo.debugquestions == Questions2.pageid) new Questions2();
+			else new Resolution2();
 		} else new Resolution2();
 	}
 }

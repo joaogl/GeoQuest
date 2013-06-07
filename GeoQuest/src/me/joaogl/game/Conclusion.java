@@ -76,11 +76,8 @@ public class Conclusion extends JFrame {
 	private void drawWinner() {
 		int size;
 		JLabel welcome;
-		if (PointsValidate.getStats(false).equalsIgnoreCase("Empate")) {
-			welcome = new JLabel(PointsValidate.getStats(true));
-		} else {
-			welcome = new JLabel("O Vencedor é: " + PointsValidate.getStats(false));
-		}
+		if (PointsValidate.getStats(false).equalsIgnoreCase("Empate")) welcome = new JLabel(PointsValidate.getStats(true));
+		else welcome = new JLabel("O Vencedor é: " + PointsValidate.getStats(false));
 		welcome.setFont(new Font("Arial", Font.BOLD, 18));
 		size = 300;
 		welcome.setBounds(((width - size) / 2), 20, size, 50);

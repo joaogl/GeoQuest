@@ -143,9 +143,6 @@ public class Comp0 {
 
 	public static void close() {
 		Example.window.removeAll();
-		if (QuestionTimer.getTime() == 40 || QuestionTimer.getTime() == 0) {
-			QuestionTimer.startTime();
-		}
+		if (QuestionTimer.getTime() == 40 || QuestionTimer.getTime() == 0) QuestionTimer.startTime();
 	}
-
 }
