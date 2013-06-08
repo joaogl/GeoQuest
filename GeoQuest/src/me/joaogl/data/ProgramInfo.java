@@ -22,4 +22,5 @@ public class ProgramInfo {
 	// Program Stuff DONT TOUCH THIS	
 	public static boolean open = false;
 	public static boolean close = false;
+	
 }
