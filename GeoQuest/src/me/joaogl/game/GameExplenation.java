@@ -19,8 +19,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
-import me.joaogl.Launcher.Credits;
-import me.joaogl.Launcher.Launcher;
+import me.joaogl.launcher.Credits;
+import me.joaogl.launcher.Launcher;
 import me.joaogl.data.ProgramInfo;
 import me.joaogl.data.points.ChangePoints;
 import me.joaogl.data.points.SeePoints;

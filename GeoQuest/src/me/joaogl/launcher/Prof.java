@@ -1,4 +1,4 @@
-package me.joaogl.Launcher;
+package me.joaogl.launcher;
 
 import java.awt.Color;
 import java.awt.Dimension;

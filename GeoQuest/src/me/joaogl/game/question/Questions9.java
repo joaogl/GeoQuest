@@ -20,7 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 
-import me.joaogl.Launcher.Credits;
+import me.joaogl.launcher.Credits;
 import me.joaogl.components.Comp9;
 import me.joaogl.data.ProgramInfo;
 import me.joaogl.data.points.PointsValidate;

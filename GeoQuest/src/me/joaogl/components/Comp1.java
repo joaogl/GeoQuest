@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-import me.joaogl.Launcher.Credits;
-import me.joaogl.Launcher.Launcher;
+import me.joaogl.launcher.Credits;
+import me.joaogl.launcher.Launcher;
 import me.joaogl.data.ProgramInfo;
 import me.joaogl.data.points.ChangePoints;
 import me.joaogl.data.points.Points;
@@ -81,7 +81,9 @@ public class Comp1 {
 		main.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Launcher();
-				close();
+				//close(false);
+				//Questions1 question = new Questions1();
+				//question.dispose();
 			}
 		});
 
@@ -187,11 +189,13 @@ public class Comp1 {
 
 	}
 
-	public static void close() {
+	public static void close(boolean open) {
 		Questions1.window.removeAll();
-		if (ProgramInfo.debugging) {
-			if (ProgramInfo.debugquestions == Questions1.pageid) new Questions1();
-			else new Resolution1();
-		} else new Resolution1();
+		if (open) {
+			if (ProgramInfo.debugging) {
+				if (ProgramInfo.debugquestions == Questions1.pageid) new Questions1();
+				else new Resolution1();
+			} else new Resolution1();
+		}
 	}
 }

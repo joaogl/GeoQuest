@@ -97,7 +97,7 @@ public class Questions1 extends JFrame {
 		validar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PointsValidate.Validar((String) team2an.getSelectedItem(), (String) team1an.getSelectedItem(), pageid);
-				Comp1.close();
+				Comp1.close(true);
 				dispose();
 			}
 		});
@@ -175,6 +175,10 @@ public class Questions1 extends JFrame {
 	private void drawMenu() {
 		bar = new JMenuBar();
 		setJMenuBar(bar);
+	}
+
+	public void dispose() {
+		dispose();
 	}
 
 }
