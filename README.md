@@ -2,6 +2,7 @@ GeoQuest
 ========
 
 What is GeoQuest?
+========
 GeoQuest is a program that I made to my school.
 It was scored as a 90% from 0 to 100%.
 This is a two team game where which team as to answer 10 questions in 15 minutes max.
@@ -9,6 +10,7 @@ Each questions we have 13 seconds.
 
 
 How does the program work?
+========
 Its started by me.joaogl.data.RunMethod class witch results in the me.joaogl.launcher.Launcher form display.
 There are two counters, me.joaogl.data.timer.QuestionTimer and me.joaogl.data.timer.TotalTimer.
 In the me.joaogl.data.ProgramInfo class there's a bunch of settings like debugging option total time and question timer...
